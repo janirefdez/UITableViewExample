@@ -13,6 +13,14 @@
 		09C437D328118D39000954F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C437D128118D39000954F9 /* Main.storyboard */; };
 		09C437D528118D3A000954F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C437D428118D3A000954F9 /* Assets.xcassets */; };
 		09C437D828118D3A000954F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C437D628118D3A000954F9 /* LaunchScreen.storyboard */; };
+		09C437E128119214000954F9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C437E028119214000954F9 /* Contact.swift */; };
+		09C437E4281192AE000954F9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C437E3281192AE000954F9 /* ViewModel.swift */; };
+		09C437EA28119BEC000954F9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C437E928119BEC000954F9 /* Repository.swift */; };
+		09C437EC28119D92000954F9 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C437EB28119D92000954F9 /* NetworkConstants.swift */; };
+		09C437F028119E59000954F9 /* GetContactsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C437EF28119E59000954F9 /* GetContactsUseCase.swift */; };
+		09C437F32811A747000954F9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C437F22811A747000954F9 /* NetworkService.swift */; };
+		09C437F52811A9A4000954F9 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C437F42811A9A4000954F9 /* ApiService.swift */; };
+		09D2FC1A2812AD4300DB60D6 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D2FC192812AD4300DB60D6 /* NetworkResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		09C437D428118D3A000954F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09C437D728118D3A000954F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09C437D928118D3A000954F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09C437E028119214000954F9 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		09C437E3281192AE000954F9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		09C437E928119BEC000954F9 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		09C437EB28119D92000954F9 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		09C437EF28119E59000954F9 /* GetContactsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContactsUseCase.swift; sourceTree = "<group>"; };
+		09C437F22811A747000954F9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		09C437F42811A9A4000954F9 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		09D2FC192812AD4300DB60D6 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,103 @@
 		09C437CA28118D39000954F9 /* UITableViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				09C437CB28118D39000954F9 /* AppDelegate.swift */,
-				09C437CD28118D39000954F9 /* SceneDelegate.swift */,
-				09C437CF28118D39000954F9 /* ViewController.swift */,
-				09C437D128118D39000954F9 /* Main.storyboard */,
+				09D2FC1B2812D70400DB60D6 /* Application */,
+				09C437E728119B55000954F9 /* Data */,
+				09C437F12811A735000954F9 /* Infrastructure */,
+				09C437EE28119E3F000954F9 /* Domain */,
+				09C437F72811B3AB000954F9 /* Presentation */,
 				09C437D428118D3A000954F9 /* Assets.xcassets */,
 				09C437D628118D3A000954F9 /* LaunchScreen.storyboard */,
 				09C437D928118D3A000954F9 /* Info.plist */,
 			);
 			path = UITableViewExample;
+			sourceTree = "<group>";
+		};
+		09C437DF28119205000954F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09C437E028119214000954F9 /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		09C437E2281192A2000954F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				09C437E3281192AE000954F9 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		09C437E52811939E000954F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				09C437CF28118D39000954F9 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		09C437E628119827000954F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09C437D128118D39000954F9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09C437E728119B55000954F9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				09C437E828119B5F000954F9 /* Network */,
+				09C437DF28119205000954F9 /* Models */,
+				09C437E928119BEC000954F9 /* Repository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		09C437E828119B5F000954F9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				09C437F42811A9A4000954F9 /* ApiService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		09C437EE28119E3F000954F9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				09C437EF28119E59000954F9 /* GetContactsUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		09C437F12811A735000954F9 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				09C437EB28119D92000954F9 /* NetworkConstants.swift */,
+				09C437F22811A747000954F9 /* NetworkService.swift */,
+				09D2FC192812AD4300DB60D6 /* NetworkResponse.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		09C437F72811B3AB000954F9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				09C437E628119827000954F9 /* View */,
+				09C437E52811939E000954F9 /* Controller */,
+				09C437E2281192A2000954F9 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		09D2FC1B2812D70400DB60D6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				09C437CB28118D39000954F9 /* AppDelegate.swift */,
+				09C437CD28118D39000954F9 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +242,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C437E128119214000954F9 /* Contact.swift in Sources */,
 				09C437D028118D39000954F9 /* ViewController.swift in Sources */,
+				09C437E4281192AE000954F9 /* ViewModel.swift in Sources */,
+				09C437F028119E59000954F9 /* GetContactsUseCase.swift in Sources */,
+				09C437F32811A747000954F9 /* NetworkService.swift in Sources */,
 				09C437CC28118D39000954F9 /* AppDelegate.swift in Sources */,
+				09C437F52811A9A4000954F9 /* ApiService.swift in Sources */,
+				09C437EC28119D92000954F9 /* NetworkConstants.swift in Sources */,
+				09D2FC1A2812AD4300DB60D6 /* NetworkResponse.swift in Sources */,
 				09C437CE28118D39000954F9 /* SceneDelegate.swift in Sources */,
+				09C437EA28119BEC000954F9 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TH9W9ZG99Z;
+				DEVELOPMENT_TEAM = ZM7SDYSP39;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UITableViewExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -315,7 +427,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TH9W9ZG99Z;
+				DEVELOPMENT_TEAM = ZM7SDYSP39;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UITableViewExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
